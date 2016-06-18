@@ -39,11 +39,16 @@ const signOut = (success, failure, data) => {
 
 const changePass = (success, failure, data) => {
   // if (!app.currentUser) bad;
-  console.log(data)
+  console.log(data);
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/change-password/' + app.currentUser.id,
-    data,
+    data: {
+  'passwords': {
+    'old': data.pw_creds.old,
+    'new': data.pw_creds.new
+  }
+},
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
     },
