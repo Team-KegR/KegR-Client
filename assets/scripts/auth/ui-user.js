@@ -13,7 +13,8 @@ const failure = (error) => {
 
 const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
-  app.currentUser.id = data.user._id;
+  app.currentUser.id = data.user.id;
+  console.log('sign in success')
 };
 
 const signInFailure = (error) => {

@@ -11,7 +11,6 @@ const app = require('../app-data');
 const userEventHandlers = () => {
 
   $('#sign-up').on('submit', function (event) {
-    console.log('signed up');
     event.preventDefault();
     let data = getFormFields(this);
     app.server.signUpData = getFormFields(this);
