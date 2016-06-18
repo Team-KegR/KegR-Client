@@ -1,12 +1,13 @@
 'use strict';
 
-
-const authApi = require('./api-user');
-const kegApi = require('./api-keg')
+// const authUi = require('./ui-user');
+// const app = require('../app-data');
+// const authApi = require('./api-user');
+const kegApi = require('./api-keg');
 // const authApiNodes = require('./api-nodes'); Not being used ATM
-const authUi = require('./ui-user');
+
 const kegUi = require('./ui-keg');
-const app = require('../app-data');
+
 
 
 
@@ -29,7 +30,7 @@ const kegEventHandlers = () => {
   $('#edit-keg-3').on('submit', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    let kegId = 3
+    let kegId = 3;
     kegApi.updateKeg3(kegUi.updateKegSuccess, kegUi.updateKegFailure, data, kegId);
   });
 
@@ -46,6 +47,12 @@ const kegEventHandlers = () => {
     let kegId = 5;
     kegApi.updateKeg5(kegUi.updateKegSuccess, kegUi.updateKegFailure, data, kegId);
   });
+
+  $('.kicked-btn').on('click', function (event) {
+    event.preventDefault();
+    kegApi.kegKick(kegUi.kegKickSuccess, kegUi.kegKickFailure, data, kegId);
+  });
+
 
 };
 

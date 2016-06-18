@@ -89,12 +89,16 @@ const updateKeg5 = (success, failure, data, id) => {
      .fail(failure);
     };
 
-    const kegKick = (success, failure, data, id) => {
+    const kegKick = (success, failure, id) => {
       console.log(data);
       $.ajax({
         method: "PATCH",
         url: app.server.api + '/kegs/' + id,
-        data,
+        data: {
+          'keg': {
+            'kicked': 'true'
+          }
+        },
         headers: {
           Authorization: 'Token token='+ app.currentUser.token,
         },
