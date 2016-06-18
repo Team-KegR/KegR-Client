@@ -1,14 +1,17 @@
 'use strict';
 
-const app = require('../app-data');
-const authApi = require('./api-user');
+// const app = require('../app-data');
+// const authApi = require('./api-user');
 
-const updateKegSuccess = () => {
-  console.log('update keg success');
+
+const getKegFailure = (error) => {
+  console.error(error);
 };
 
-const updateKegFailure = (error) => {
-  console.error(error);
+const getKegSuccess = (data) => {
+  console.log('get keg success');
+  console.log("you got kegs " + data.kegs);
+  kegDisplay(data);
 };
 
 let kegDisplay = function(kegs){
@@ -19,15 +22,17 @@ let kegDisplay = function(kegs){
   }));
 };
 
-const getKegSuccess = (data) => {
-  console.log('get keg success');
-  console.log("you got kegs " + data.kegs);
-  kegDisplay(data);
+
+const updateKegSuccess = () => {
+  console.log('update keg success');
+  kegDisplay();
 };
 
-const getKegFailure = (error) => {
+const updateKegFailure = (error) => {
   console.error(error);
 };
+
+
 
 const kegKickSuccess = (data) => {
   console.log("keg kicked " + data);
