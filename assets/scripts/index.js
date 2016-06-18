@@ -6,7 +6,9 @@
 // use require without a reference to ensure a file is bundled
 require('./example');
 let userEvents = require('./auth/events-user.js');
+let kegEvents = require('./auth/events-keg');
 
 $(() => {
   userEvents.userEventHandlers();
+  kegEvents.kegEventHandlers();
 });
