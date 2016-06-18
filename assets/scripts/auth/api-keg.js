@@ -72,10 +72,28 @@ const updateKeg5 = (success, failure, data, id) => {
    .fail(failure);
   };
 
+  const getKegs = (success, failure) => {
+    $.ajax({
+      method: "GET",
+      url: app.server.api + '/kegs/',
+      dataType: 'JSON',
+      headers: {
+        Authorization: 'Token token='+ app.currentUser.token,
+      },
+    })
+    .done(function(kegs){
+      console.log(kegs);
+    })
+     .fail(failure);
+    };
+
+
+
 module.exports = {
   updateKeg1,
   updateKeg2,
   updateKeg3,
   updateKeg4,
-  updateKeg5
+  updateKeg5,
+  getKegs
 };
