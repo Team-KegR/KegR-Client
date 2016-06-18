@@ -89,6 +89,19 @@ const updateKeg5 = (success, failure, data, id) => {
      .fail(failure);
     };
 
+    const kegKick = (success, failure, data, id) => {
+      console.log(data);
+      $.ajax({
+        method: "PATCH",
+        url: app.server.api + '/kegs/' + id,
+        data,
+        headers: {
+          Authorization: 'Token token='+ app.currentUser.token,
+        },
+      })
+      .done(success)
+       .fail(failure);
+      };
 
 
 module.exports = {
@@ -97,5 +110,6 @@ module.exports = {
   updateKeg3,
   updateKeg4,
   updateKeg5,
-  getKegs
+  getKegs,
+  kegKick
 };
