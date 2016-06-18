@@ -1,7 +1,7 @@
 'use strict';
 
 const server = {
-  api: 'http://localhost:3000',
+  api: 'https://kegr.herokuapp.com',
   };
 
   let currentUser = {
