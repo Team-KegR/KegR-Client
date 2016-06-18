@@ -35,6 +35,7 @@ const signUpFailure = (error) => {
 const signOutSuccess = () => {
   app.currentUser.token = null;
   app.currentUser.id = null;
+  console.log('sign out success')
 };
 
 const changePwSuccess = (data) => {

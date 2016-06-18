@@ -35,6 +35,12 @@ const userEventHandlers = () => {
     authApi.changePass(authUi.changePwSuccess, authUi.changePwFailure, data);
     console.log(data);
   });
+
+  $('#signOut').on('click', function (event) {
+    event.preventDefault();
+    console.log('sign out clicked');
+    authApi.signOut(authUi.signOutSuccess, authUi.failure);
+  });
 };
 
 
