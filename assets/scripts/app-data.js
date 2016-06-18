@@ -1,11 +1,11 @@
 'use strict';
 
 const server = {
-  api: 'http://localhost:3000.com',
+  api: 'http://localhost:3000',
   };
 
   let currentUser = {
-    id: undefined,
+    id: 0,
     token:''
   };
 
