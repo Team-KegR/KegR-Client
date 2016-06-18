@@ -1,178 +1,182 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
+<head>
+  <title>Example</title>
 
-    <!--sign up form-->
-      <form id="sign-up">
-        <div class="form-group">
-          <label for="signUpEmail">Email address</label>
-          <input type="email" class="form-control" id="signUpEmail" name="credentials[email]" placeholder="Email">
-        </div>
-        <div class="form-group">
-          <label for="signUpPassword1">Password <span class="password-span">Uppercase, lowercase, and number</span></label>
-          <input type="password" class="form-control" id="signUpPassword1" name="credentials[password]" placeholder="Password">
-        </div>
-        <div class="form-group">
-          <label for="signUpPassword2">Confirm Password</label>
-          <input type="password" class="form-control" id="signUpPassword2" name="credentials[password_confirmation]" placeholder="Password">
-        </div>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-      </form>
+  <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-      <hr>
+<body class="container-fluid">
+
+  <!--sign up form-->
+  <form id="sign-up">
+    <div class="form-group">
+      <label for="signUpEmail">Email address</label>
+      <input type="email" class="form-control" id="signUpEmail" name="credentials[email]" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="signUpPassword1">Password <span class="password-span">Uppercase, lowercase, and number</span></label>
+      <input type="password" class="form-control" id="signUpPassword1" name="credentials[password]" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="signUpPassword2">Confirm Password</label>
+      <input type="password" class="form-control" id="signUpPassword2" name="credentials[password_confirmation]" placeholder="Password">
+    </div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+
+  <hr>
 
   <!-- sign in form-->
-      <form id="sign-in">
-      <div class="form-group">
-        <label for="signInEmail" >Email address</label>
-        <input type="email" class="form-control" id="signInEmail" name="credentials[email]" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <label for="signInPassword">Password <span class="password-span">Uppercase, lowercase, and number</span></label>
-        <input type="password" class="form-control" id="signInPassword" name="credentials[password]" placeholder="Password">
-      </div>
-      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <button type="submit" class="btn btn-primary">Sign In</button>
-    </form>
+  <form id="sign-in">
+    <div class="form-group">
+      <label for="signInEmail">Email address</label>
+      <input type="email" class="form-control" id="signInEmail" name="credentials[email]" placeholder="Email">
+    </div>
+    <div class="form-group">
+      <label for="signInPassword">Password <span class="password-span">Uppercase, lowercase, and number</span></label>
+      <input type="password" class="form-control" id="signInPassword" name="credentials[password]" placeholder="Password">
+    </div>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+  </form>
 
-    <hr>
+  <hr>
 
-    <!--change password form-->
+  <!--change password form-->
 
-    <form id="change-password">
-  <div class="form-group">
-    <label for="changePassword1">Old Password</label>
-    <input type="password" class="form-control" id="changePassword1" name="pw_creds[old]" placeholder="Old Password">
-  </div>
-  <div class="form-group">
-    <label for="changePassword2">New Password <span class="password-span">Uppercase, lowercase, and number</span></label>
-    <input type="password" class="form-control" id="changePassword2" name="pw_creds[new]" placeholder="New Password">
-  </div>
+  <form id="change-password">
+    <div class="form-group">
+      <label for="changePassword1">Old Password</label>
+      <input type="password" class="form-control" id="changePassword1" name="pw_creds[old]" placeholder="Old Password">
+    </div>
+    <div class="form-group">
+      <label for="changePassword2">New Password <span class="password-span">Uppercase, lowercase, and number</span></label>
+      <input type="password" class="form-control" id="changePassword2" name="pw_creds[new]" placeholder="New Password">
+    </div>
 
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Change Password</button>
-</form>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Change Password</button>
+  </form>
 
-<hr>
+  <hr>
 
-<!-- sign out button -->
+  <!-- sign out button -->
 
-<button class="btn btn-danger" id="signOut">Sign-Out</button>
+  <button class="btn btn-danger" id="signOut">Sign-Out</button>
 
-<hr>
-
-
-<!--KEG HANDLEBAHS-->
-<div class ="content">
+  <hr>
 
 
-<!-- edit keg form 1-->
-keg1
-<form id="edit-keg-1">
-  <div class="form-group">
-    <label for="beerName">Name</label>
-    <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
-  </div>
-  <div class="form-group">
-    <label for="validation">Up to date?</label>
-    <input type="checkbox" class="form-control" name="keg[validation]">
-  </div>
-  <div class="form-group">
-    <label for="kicked">Kicked?</label>
-    <input type="checkbox" class="form-control" name="keg[kicked]">
+  <!--KEG HANDLEBAHS-->
+  <div class="content">
   </div>
 
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Cheers</button>
-</form>
 
-<!-- edit keg form 2-->
-keg2
-<form id="edit-keg-2">
-  <div class="form-group">
-    <label for="beerName">Name</label>
-    <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
-  </div>
-  <div class="form-group">
-    <label for="validation">Up to date?</label>
-    <input type="checkbox" class="form-control" name="keg[validation]">
-  </div>
-  <div class="form-group">
-    <label for="kicked">Kicked?</label>
-    <input type="checkbox" class="form-control" name="keg[kicked]">
-  </div>
+  <!-- edit keg form 1-->
+  keg1
+  <form id="edit-keg-1">
+    <div class="form-group">
+      <label for="beerName">Name</label>
+      <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
+    </div>
+    <div class="form-group">
+      <label for="validation">Up to date?</label>
+      <input type="checkbox" class="form-control" name="keg[validation]">
+    </div>
+    <div class="form-group">
+      <label for="kicked">Kicked?</label>
+      <input type="checkbox" class="form-control" name="keg[kicked]">
+    </div>
 
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Cheers</button>
-</form>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Cheers</button>
+  </form>
 
-<!-- edit keg form 3-->
-keg 3
-<form id="edit-keg-3">
-  <div class="form-group">
-    <label for="beerName">Name</label>
-    <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
-  </div>
-  <div class="form-group">
-    <label for="validation">Up to date?</label>
-    <input type="checkbox" class="form-control" name="keg[validation]">
-  </div>
-  <div class="form-group">
-    <label for="kicked">Kicked?</label>
-    <input type="checkbox" class="form-control" name="keg[kicked]">
-  </div>
+  <!-- edit keg form 2-->
+  keg2
+  <form id="edit-keg-2">
+    <div class="form-group">
+      <label for="beerName">Name</label>
+      <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
+    </div>
+    <div class="form-group">
+      <label for="validation">Up to date?</label>
+      <input type="checkbox" class="form-control" name="keg[validation]">
+    </div>
+    <div class="form-group">
+      <label for="kicked">Kicked?</label>
+      <input type="checkbox" class="form-control" name="keg[kicked]">
+    </div>
 
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Cheers</button>
-</form>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Cheers</button>
+  </form>
 
-<!-- edit keg form 4-->
-keg 4
-<form id="edit-keg-4">
-  <div class="form-group">
-    <label for="beerName">Name</label>
-    <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
-  </div>
-  <div class="form-group">
-    <label for="validation">Up to date?</label>
-    <input type="checkbox" class="form-control" name="keg[validation]">
-  </div>
-  <div class="form-group">
-    <label for="kicked">Kicked?</label>
-    <input type="checkbox" class="form-control" name="keg[kicked]">
-  </div>
+  <!-- edit keg form 3-->
+  keg 3
+  <form id="edit-keg-3">
+    <div class="form-group">
+      <label for="beerName">Name</label>
+      <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
+    </div>
+    <div class="form-group">
+      <label for="validation">Up to date?</label>
+      <input type="checkbox" class="form-control" name="keg[validation]">
+    </div>
+    <div class="form-group">
+      <label for="kicked">Kicked?</label>
+      <input type="checkbox" class="form-control" name="keg[kicked]">
+    </div>
 
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Cheers</button>
-</form>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Cheers</button>
+  </form>
 
-<!-- edit keg form 5-->
-keg 5
-<form id="edit-keg-5">
-  <div class="form-group">
-    <label for="beerName">Name</label>
-    <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
-  </div>
-  <div class="form-group">
-    <label for="validation">Up to date?</label>
-    <input type="checkbox" class="form-control" name="keg[validation]">
-  </div>
-  <div class="form-group">
-    <label for="kicked">Kicked?</label>
-    <input type="checkbox" class="form-control" name="keg[kicked]">
-  </div>
+  <!-- edit keg form 4-->
+  keg 4
+  <form id="edit-keg-4">
+    <div class="form-group">
+      <label for="beerName">Name</label>
+      <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
+    </div>
+    <div class="form-group">
+      <label for="validation">Up to date?</label>
+      <input type="checkbox" class="form-control" name="keg[validation]">
+    </div>
+    <div class="form-group">
+      <label for="kicked">Kicked?</label>
+      <input type="checkbox" class="form-control" name="keg[kicked]">
+    </div>
 
-  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  <button type="submit" class="btn btn-primary">Cheers</button>
-</form>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Cheers</button>
+  </form>
+
+  <!-- edit keg form 5-->
+  keg 5
+  <form id="edit-keg-5">
+    <div class="form-group">
+      <label for="beerName">Name</label>
+      <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
+    </div>
+    <div class="form-group">
+      <label for="validation">Up to date?</label>
+      <input type="checkbox" class="form-control" name="keg[validation]">
+    </div>
+    <div class="form-group">
+      <label for="kicked">Kicked?</label>
+      <input type="checkbox" class="form-control" name="keg[kicked]">
+    </div>
+
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="submit" class="btn btn-primary">Cheers</button>
+  </form>
 
 
 </body>
+
 </html>

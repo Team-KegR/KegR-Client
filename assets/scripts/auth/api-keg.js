@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app-data');
+const kegUi = require('./ui-keg');
 
 const updateKeg1 = (success, failure, data, id) => {
   console.log(data, id);
@@ -83,6 +84,7 @@ const updateKeg5 = (success, failure, data, id) => {
     })
     .done(function(kegs){
       console.log(kegs);
+      kegUi.getKegSuccess(kegs);
     })
      .fail(failure);
     };

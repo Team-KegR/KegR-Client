@@ -16,14 +16,13 @@ let kegDisplay = function(kegs){
   console.log("keg display", kegs);
   $('.content').html(kegDisplayTemplate({
     kegs : kegs.kegs
-  })
-);
+  }));
 };
 
 const getKegSuccess = (data) => {
   console.log('get keg success');
   console.log("you got kegs " + data.kegs);
-  kegDisplay();
+  kegDisplay(data);
 };
 
 const getKegFailure = (error) => {
