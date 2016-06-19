@@ -109,7 +109,7 @@ const updateKeg5 = (success, failure, data, id) => {
           url: app.server.api + '/kegs/' + id,
           data: {
             'keg': {
-              'validation': valid
+              'validation': validate
             }
           },
         })
