@@ -2,6 +2,7 @@
 
 // const app = require('../app-data');
 // const authApi = require('./api-user');
+const kegApi = require('./api-keg');
 
 
 const getKegFailure = (error) => {
@@ -9,6 +10,13 @@ const getKegFailure = (error) => {
 };
 
 
+const kegKickSuccess = (data) => {
+  console.log("keg kicked " + data);
+};
+
+const kegKickFailure = (error) => {
+  console.error(error);
+};
 
 const getKegSuccess = (kegs) => {
   console.log('get keg success');
@@ -18,6 +26,12 @@ const getKegSuccess = (kegs) => {
   $('.content').html(kegDisplayTemplate({
     kegs : kegs.kegs
   }));
+  $('.kicked-btn').on('click', function (event) {
+    event.preventDefault();
+    console.log("clicked kicked button");
+    let kegId = $(this).attr('data-attribute');
+    kegApi.kegKick(kegKickSuccess, kegKickFailure, kegId);
+  });
 };
 
 const updateKegSuccess = () => {
