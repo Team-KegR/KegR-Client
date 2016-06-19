@@ -57,7 +57,6 @@ const kegEventHandlers = () => {
 
   $('.content').on('click', '.validate-btn', function (event) {
     event.preventDefault();
-    debugger;
     console.log("clicked kicked button");
     let kegId = $(this).closest('.validate-btn').attr('data-id');
     let validate = $(this).closest('.validate-btn').attr('data-attribute');
