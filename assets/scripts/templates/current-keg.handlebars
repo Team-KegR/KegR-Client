@@ -1,12 +1,9 @@
-<h1> wtf handlebars</h1>
+<h1>Kegs</h1>
 {{#each kegs}}
-
-
   <div class="row">
-    <div class="panel panel-inverse edit-keg" data-attribute={{this.id}}>
+    <div class="panel panel-inverse" data-attribute={{this.id}}>
       <div class="panel-body">
         <div class="col-md-6">
-          <div class='keg-stats'>
             {{#if this.kicked}}
               <h5 class="keg-beer-name">The keg is kicked!</h5>
             {{else}}
@@ -15,10 +12,7 @@
               <button class="kicked-btn" id="kicked-{{this.id}}" data-attribute={{this.id}}>KICK IT</button>
               <button class="validate-btn" id="validate-{{this.id}}" data-id={{this.id}} data-attribute={{this.validation}}>Beer Confirmed</button>
             {{/if}}
-
-          </div>
-        </div>
-        <div class="col-md-6">
+            <button class="update-btn" id="update-{{this.id}}" data-id={{this.id}}>New Beer?</button>
         </div>
       </div>
     </div>
@@ -28,3 +22,27 @@
     </div>
 
 {{/each}}
+
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">New Beer</h4>
+      </div>
+      <div class="modal-body">
+        <form id="edit-keg">
+          <div class="form-group">
+            <label for="beerName">Name</label>
+            <input type="text" class="form-control" name="keg[name]" placeholder="Beer">
+          </div>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Cheers</button>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
