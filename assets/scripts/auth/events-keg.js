@@ -52,7 +52,7 @@ const kegEventHandlers = () => {
     event.preventDefault();
     debugger;
     console.log("clicked kicked button");
-    let kegId = $(this).closest('kicked-btn').attr('data-attribute');
+    let kegId = $(this).closest('.kicked-btn').attr('data-attribute');
     kegApi.kegKick(kegUi.kegKickSuccess, kegUi.kegKickFailure, kegId);
   });
 
