@@ -7,8 +7,13 @@
       <div class="panel-body">
         <div class="col-md-6">
           <div class='keg-stats'>
-            <h5 class="keg-beer-name">{{this.name}}</h5>
-            <button class="kicked-btn" id="kicked-{{this.id}}">KICK IT</button>
+            {{#if this.kicked}}
+              <h5 class="keg-beer-name">The keg is kicked!</h5>
+            {{else}}
+              <h5 class="keg-beer-name">{{this.name}}</h5>
+              <button class="kicked-btn" id="kicked-{{this.id}}">KICK IT</button>
+            {{/if}}
+
           </div>
         </div>
         <div class="col-md-6">
