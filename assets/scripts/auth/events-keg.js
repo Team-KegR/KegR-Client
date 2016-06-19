@@ -7,6 +7,7 @@ const kegApi = require('./api-keg');
 // const authApiNodes = require('./api-nodes'); Not being used ATM
 
 const kegUi = require('./ui-keg');
+const getFormFields = require('../../../lib/get-form-fields');
 
 
 
@@ -61,8 +62,8 @@ const kegEventHandlers = () => {
     let kegId = $(this).closest('.validate-btn').attr('data-id');
     let validate = $(this).closest('.validate-btn').attr('data-attribute');
     validate++;
-    console.log(validate)
-    kegApi.validate(kegUi.validateSuccess, kegUi.validateFailure, kegId, validate);
+    console.log(validate);
+    kegApi.validate(kegApi.validateSuccess, kegApi.validateFailure, kegId, validate);
   });
 
 
