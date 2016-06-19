@@ -8,13 +8,11 @@ const getKegFailure = (error) => {
   console.error(error);
 };
 
-const getKegSuccess = (data) => {
-  console.log('get keg success');
-  console.log("you got kegs " + data.kegs);
-  kegDisplay(data);
-};
 
-let kegDisplay = function(kegs){
+
+const getKegSuccess = (kegs) => {
+  console.log('get keg success');
+  console.log("you got kegs " + kegs);
   let kegDisplayTemplate = require('../templates/current-keg.handlebars');
   console.log("keg display", kegs);
   $('.content').html(kegDisplayTemplate({
@@ -22,10 +20,8 @@ let kegDisplay = function(kegs){
   }));
 };
 
-
 const updateKegSuccess = () => {
   console.log('update keg success');
-  kegDisplay();
 };
 
 const updateKegFailure = (error) => {
@@ -36,7 +32,6 @@ const updateKegFailure = (error) => {
 
 const kegKickSuccess = (data) => {
   console.log("keg kicked " + data);
-  kegDisplay(data);
 };
 
 const kegKickFailure = (error) => {
@@ -47,7 +42,6 @@ const kegKickFailure = (error) => {
 module.exports = {
   updateKegSuccess,
   updateKegFailure,
-  kegDisplay,
   getKegSuccess,
   getKegFailure,
   kegKickSuccess,

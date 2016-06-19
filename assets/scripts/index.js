@@ -12,6 +12,6 @@ let kegUi = require('./auth/ui-keg');
 
 $(() => {
   userEvents.userEventHandlers();
-  kegEvents.kegEventHandlers();
   kegApi.getKegs(kegUi.getKegSuccess, kegUi.getKegFailure);
+  kegEvents.kegEventHandlers();
 });

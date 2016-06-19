@@ -90,7 +90,6 @@ const updateKeg5 = (success, failure, data, id) => {
     };
 
     const kegKick = (success, failure, id) => {
-      console.log(data);
       $.ajax({
         method: "PATCH",
         url: app.server.api + '/kegs/' + id,
