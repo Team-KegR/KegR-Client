@@ -44,13 +44,6 @@ const updateKegFailure = (error) => {
 
 
 
-const kegKickSuccess = (data) => {
-  console.log("keg kicked " + data);
-};
-
-const kegKickFailure = (error) => {
-  console.error(error);
-};
 
 
 module.exports = {
