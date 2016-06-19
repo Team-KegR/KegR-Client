@@ -13,7 +13,7 @@
               <h5 class="keg-beer-name">{{this.name}}</h5>
               <p>{{this.validation}} Validation(s)</p>
               <button class="kicked-btn" id="kicked-{{this.id}}" data-attribute={{this.id}}>KICK IT</button>
-              <button class="validate-btn" id="validate-{{this.id}}" data-attribute={{this.validation}}>Beer Confirmed</button>
+              <button class="validate-btn" id="validate-{{this.id}}" data-id={{this.id}} data-attribute={{this.validation}}>Beer Confirmed</button>
             {{/if}}
 
           </div>
