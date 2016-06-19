@@ -103,6 +103,20 @@ const updateKeg5 = (success, failure, data, id) => {
       .fail(failure);
       };
 
+      const validate = (success, failure, id) => {
+        $.ajax({
+          method: "PATCH",
+          url: app.server.api + '/kegs/' + id,
+          data: {
+            'keg': {
+              'validation': valid
+            }
+          },
+        })
+        .done(success)
+        .fail(failure);
+        };
+
 
 module.exports = {
   updateKeg1,
