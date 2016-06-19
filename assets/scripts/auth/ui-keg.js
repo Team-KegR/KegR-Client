@@ -2,7 +2,7 @@
 
 // const app = require('../app-data');
 // const authApi = require('./api-user');
-// const kegApi = require('./api-keg');
+const kegApi = require('./api-keg');
 
 const kegKickSuccess = (data) => {
   console.log("keg kicked " + data);
@@ -15,6 +15,7 @@ const kegKickFailure = (error) => {
 
 const updateKegSuccess = () => {
   console.log('update keg success');
+  kegApi.getKegs(kegApi.getKegSuccess, kegApi.getKegFailure);
 };
 
 const updateKegFailure = (error) => {
