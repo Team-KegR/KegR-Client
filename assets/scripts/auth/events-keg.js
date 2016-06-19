@@ -50,10 +50,16 @@ const kegEventHandlers = () => {
 
   $('.content').on('click', '.kicked-btn', function (event) {
     event.preventDefault();
-    debugger;
     console.log("clicked kicked button");
     let kegId = $(this).closest('.kicked-btn').attr('data-attribute');
     kegApi.kegKick(kegUi.kegKickSuccess, kegUi.kegKickFailure, kegId);
+  });
+
+  $('.content').on('click', '.kicked-btn', function (event) {
+    event.preventDefault();
+    console.log("clicked kicked button");
+    let kegId = $(this).closest('.kicked-btn').attr('data-attribute');
+    kegApi.validate(kegUi.validateSuccess, kegUi.validateFailure, kegId);
   });
 
 

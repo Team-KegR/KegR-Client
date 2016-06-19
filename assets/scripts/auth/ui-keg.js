@@ -9,6 +9,13 @@ const getKegFailure = (error) => {
   console.error(error);
 };
 
+const validateSuccess = () => {
+  console.log('validate keg success');
+};
+
+const validateFailure = (error) => {
+  console.error(error);
+};
 
 const kegKickSuccess = (data) => {
   console.log("keg kicked " + data);
@@ -46,6 +53,7 @@ module.exports = {
   getKegSuccess,
   getKegFailure,
   kegKickSuccess,
-  kegKickFailure
-
-};
+  kegKickFailure,
+  validateSuccess,
+  validateFailure
+ };
