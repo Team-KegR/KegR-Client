@@ -7,70 +7,96 @@ const updateKeg1 = (success, failure, data, id) => {
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/kegs/' + id,
-    data,
+    data: {
+      'keg': {
+        'kicked': 'false',
+        'name': data.name
+      },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
-    },
-  })
-  .done(success)
-   .fail(failure);
-  };
+    }
+  },
+})
+.done(success)
+.fail(failure);
+};
+
 
 const updateKeg2 = (success, failure, data, id) => {
   console.log(data);
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/kegs/' + id,
-    data,
+    data: {
+      'keg': {
+        'kicked': 'false',
+        'name': data.name
+      },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
-    },
-  })
-  .done(success)
-   .fail(failure);
-  };
+    }
+  },
+})
+.done(success)
+.fail(failure);
+};
 
 const updateKeg3 = (success, failure, data, id) => {
   console.log(data);
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/kegs/' + id,
-    data,
+    data: {
+      'keg': {
+        'kicked': 'false',
+        'name': data.name
+      },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
-    },
-  })
-  .done(success)
-   .fail(failure);
-  };
+    }
+  },
+})
+.done(success)
+.fail(failure);
+};
 
 const updateKeg4 = (success, failure, data, id) => {
   console.log(data);
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/kegs/' + id,
-    data,
+    data: {
+      'keg': {
+        'kicked': 'false',
+        'name': data.name
+      },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
-    },
-  })
-  .done(success)
-   .fail(failure);
-  };
+    }
+  },
+})
+.done(success)
+.fail(failure);
+};
 
 const updateKeg5 = (success, failure, data, id) => {
   console.log(data);
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/kegs/' + id,
-    data,
+    data: {
+      'keg': {
+        'kicked': 'false',
+        'name': data.name
+      },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
-    },
-  })
-  .done(success)
-   .fail(failure);
-  };
+    }
+  },
+})
+.done(success)
+.fail(failure);
+};
 
     const kegKick = (success, failure, id) => {
       $.ajax({
