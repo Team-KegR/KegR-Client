@@ -3,14 +3,15 @@
 const app = require('../app-data');
 
 const updateKeg = (success, failure, data, id) => {
-  console.log(data, id);
+  console.log("update data " + data, id);
+  debugger;
   $.ajax({
     method: "PATCH",
     url: app.server.api + '/kegs/' + id,
     data: {
       'keg': {
         'kicked': 'false',
-        'name': data.name
+        'name': data.keg.name
       },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
