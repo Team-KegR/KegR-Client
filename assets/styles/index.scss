@@ -1,2 +1,21 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.content {
+  margin-top: 60px;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbar {
+  background-color: #000;
+}
+
+.navbar-brand {
+  color: #A5AEB1;
+  font-size: 30px;
+  font-weight: 600;
+}

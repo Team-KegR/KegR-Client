@@ -14,7 +14,11 @@ const failure = (error) => {
 const signInSuccess = (data) => {
   app.currentUser.token = data.user.token;
   app.currentUser.id = data.user.id;
-  console.log('sign in success')
+  console.log('sign in success');
+  $('.content').removeClass('hidden');
+  $('.navbar').removeClass('hidden');
+  $('.modal.in').modal('hide');
+  $('.landing-header').addClass('hidden');
 };
 
 const signInFailure = (error) => {
@@ -35,7 +39,11 @@ const signUpFailure = (error) => {
 const signOutSuccess = () => {
   app.currentUser.token = null;
   app.currentUser.id = null;
-  console.log('sign out success')
+  console.log('sign out success');
+  $('.landing-header').removeClass('hidden');
+  $('.modal.in').modal('hide');
+  $('.content').addClass('hidden');
+  $('.navbar').addClass('hidden');
 };
 
 const changePwSuccess = (data) => {

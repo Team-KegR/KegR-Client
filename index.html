@@ -10,69 +10,233 @@
 
 <body class="container-fluid">
 
-  <!--sign up form-->
-  <form id="sign-up">
-    <div class="form-group">
-      <label for="signUpEmail">Email address</label>
-      <input type="email" class="form-control" id="signUpEmail" name="credentials[email]" placeholder="Email">
+  <!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top hidden">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Kegr</a>
     </div>
-    <div class="form-group">
-      <label for="signUpPassword1">Password <span class="password-span">Uppercase, lowercase, and number</span></label>
-      <input type="password" class="form-control" id="signUpPassword1" name="credentials[password]" placeholder="Password">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="myaccount-dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#" data-toggle="modal" data-target="#change-password-modal">Change Password</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#sign-out-modal">Sign Out</a></li>
+          </ul>
+        </li>
+      </ul>
     </div>
-    <div class="form-group">
-      <label for="signUpPassword2">Confirm Password</label>
-      <input type="password" class="form-control" id="signUpPassword2" name="credentials[password_confirmation]" placeholder="Password">
-    </div>
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
-  </form>
+  </div>
+</nav>
+<!-- End Navbar -->
 
-  <hr>
+<!-- Landing Header -->
+ <div class="landing-header">
+     <div class="container">
 
-  <!-- sign in form-->
-  <form id="sign-in">
-    <div class="form-group">
-      <label for="signInEmail">Email address</label>
-      <input type="email" class="form-control" id="signInEmail" name="credentials[email]" placeholder="Email">
-    </div>
-    <div class="form-group">
-      <label for="signInPassword">Password <span class="password-span">Uppercase, lowercase, and number</span></label>
-      <input type="password" class="form-control" id="signInPassword" name="credentials[password]" placeholder="Password">
-    </div>
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-primary">Sign In</button>
-  </form>
+         <div class="row">
+             <div class="col-lg-12">
+                 <div class="intro-message">
+                     <h1>Welcome toKegR</h1>
+                     <h3>BEER BEER BEER</h3>
+                     <ul class="list-inline intro-social-buttons">
+                         <li>
+                            <a href="#" data-toggle="modal" data-target="#sign-in-modal">Sign In</a>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+         </div>
 
-  <hr>
+     </div>
 
-  <!--change password form-->
 
-  <form id="change-password">
-    <div class="form-group">
-      <label for="changePassword1">Old Password</label>
-      <input type="password" class="form-control" id="changePassword1" name="pw_creds[old]" placeholder="Old Password">
-    </div>
-    <div class="form-group">
-      <label for="changePassword2">New Password <span class="password-span">Uppercase, lowercase, and number</span></label>
-      <input type="password" class="form-control" id="changePassword2" name="pw_creds[new]" placeholder="New Password">
-    </div>
+ </div>
+ <!-- Landing Header -->
 
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    <button type="submit" class="btn btn-primary">Change Password</button>
-  </form>
 
-  <hr>
+ <!-- All Modals -->
 
-  <!-- sign out button -->
 
-  <button class="btn btn-danger" id="signOut">Sign-Out</button>
+<!-- Sign Up Modal -->
+<div id="sign-up-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Create an Account</h4>
+     </div>
+     <div class="modal-body">
+       <form id="sign-up">
+         <div class="form-group">
+           <input id="email" type="email" class="form-control" name="credentials[email]" placeholder="Email">
+         </div>
+         <div class="form-group">
+           <input id="password" type="password" class="form-control" name="credentials[password]" placeholder="Password">
+         </div>
+         <div class="form-group">
+           <input id="password" type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
+         </div>
+         <button type="submit" class="btn btn-success btn-lg"><span class="fa fa-beer"></span>Sign Up</button>
+       </form>
+     </div>
+     <div class="modal-footer">
+       <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? Log in here</a>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- End Sign Up Modal -->
 
-  <hr>
+<!-- Sign In Modal -->
+<div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Log In</h4>
+     </div>
+     <div class="modal-body">
+       <!--Sign In Form -->
+       <form id="sign-in">
+         <div class="form-group">
+           <input type="email" name="credentials[email]" class="form-control" id="exampleInputEmail1" placeholder="Email">
+         </div>
+         <div class="form-group">
+           <input type="password" name="credentials[password]" class="form-control" id="exampleInputPassword1" placeholder="Password">
+         </div>
+         <button id="btn-submit" type="submit" class="btn btn-success btn-lg"><span class="fa fa-beer"></span>Log In</button>
+       </form>
+       <!--End Sign In Form -->
+     </div>
+     <div class="modal-footer">
+       <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal">Need to create an account? Sign up here.</a>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- End Sign In Modal -->
 
+<!-- Modal Change Password -->
+<div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+     </div>
+     <div class="modal-body">
+       <!--Change Password Form -->
+       <form id="change-password">
+         <div class="form-group">
+           <input type="password" name="pw_creds[old]" class="form-control" id="exampleInputPassword1" placeholder="Current Password">
+         </div>
+         <div class="form-group">
+           <input type="password" name="pw_creds[new]" class="form-control" id="exampleInputPassword1" placeholder="New Password">
+         </div>
+         <button type="submit" class="btn btn-primary" id="btn-submit">Change</button>
+       </form>
+       <!--End Change Password Form -->
+     </div>
+     <div class="modal-footer">
+     </div>
+   </div>
+ </div>
+</div>
+
+<!-- Sign Out Modal -->
+<div class="modal fade" id="sign-out-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+ <div class="modal-dialog" role="document">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title" id="myModalLabel">Are you sure you want to log out?</h4>
+     </div>
+     <div class="modal-body">
+       <form id="sign-out">
+         <button type="submit" class="btn btn-primary" id="btn-logout">Log Out</button>
+         <a href="#" data-dismiss="modal" data-toggle="modal">Cancel</a>
+       </form>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- End Sign Out Modal -->
+
+<!-- Modal Change Password Success-->
+<div class="modal fade" id="change-password-success-modal" tabindex="-1" role="dialog">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title">Password Changed</h4>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-primary">Close</button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- End Modal Change Password Success-->
+
+<!-- Modal Change Password Fail-->
+<div class="modal fade" id="change-password-fail-modal" tabindex="-1" role="dialog">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title">Unable to change password</h4>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#change-password-modal">Try Again</button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- Modal Change Password Fail-->
+
+<!-- Sign In Fail-->
+<div class="modal fade" id="sign-in-fail-modal" tabindex="-1" role="dialog">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title">The email address and password you entered did not match our records. Please double-check and try again.</h4>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Back</button>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- End Sign In Fail-->
+
+<!-- Sign Up Fail-->
+<div class="modal fade" id="sign-up-fail-modal" tabindex="-1" role="dialog">
+ <div class="modal-dialog">
+   <div class="modal-content">
+     <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+       <h4 class="modal-title">The email address you entered has already been taken.</h4>
+     </div>
+     <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal" data-toggle="modal" data-target="#sign-up-modal">Back</button>
+       <a href="#" data-dismiss="modal" data-toggle="modal" data-target="#sign-in-modal">Already have an account? f here.</a>
+     </div>
+   </div>
+ </div>
+</div>
+<!-- End Sign Up Fail-->
 
   <!--KEG HANDLEBAHS-->
-  <div class="content">
+  <div class=" hidden content">
   </div>
 
   <!-- EDIT KEG MODAL-->
