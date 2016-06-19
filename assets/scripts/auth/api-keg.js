@@ -10,7 +10,8 @@ const updateKeg = (success, failure, data, id) => {
     data: {
       'keg': {
         'kicked': 'false',
-        'name': data.keg.name
+        'name': data.keg.name,
+        'validation': 0
       },
     headers: {
       Authorization: 'Token token='+ app.currentUser.token,
