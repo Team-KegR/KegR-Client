@@ -15,10 +15,10 @@ const getFormFields = require('../../../lib/get-form-fields');
 const kegEventHandlers = () => {
 
   // click event to open modal for editing keg
-  $('.content').on('click', '.edit-keg-btn', function (event) {
+  $('.content').on('click', '.update-btn', function (event) {
     event.preventDefault();
     let data = getFormFields(this);
-    let kegId = $(this).closest('.edit-keg-btn').attr('data-id');
+    let kegId = $(this).closest('.update-btn').attr('data-id');
     kegApi.updateKeg1(kegUi.updateKegSuccess, kegUi.updateKegFailure, data, kegId);
   });
 
