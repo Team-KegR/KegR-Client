@@ -55,11 +55,14 @@ const kegEventHandlers = () => {
     kegApi.kegKick(kegUi.kegKickSuccess, kegUi.kegKickFailure, kegId);
   });
 
-  $('.content').on('click', '.kicked-btn', function (event) {
+  $('.content').on('click', '.validate-btn', function (event) {
     event.preventDefault();
     console.log("clicked kicked button");
     let kegId = $(this).closest('.kicked-btn').attr('data-attribute');
-    kegApi.validate(kegUi.validateSuccess, kegUi.validateFailure, kegId);
+    let validate = $(this).closest('.validate-btn').attr('data-attribute');
+    validate++;
+    console.log(validate)
+    kegApi.validate(kegUi.validateSuccess, kegUi.validateFailure, kegId, validate);
   });
 
 
