@@ -98,12 +98,9 @@ const updateKeg5 = (success, failure, data, id) => {
             'kicked': 'true'
           }
         },
-        headers: {
-          Authorization: 'Token token='+ app.currentUser.token,
-        },
       })
       .done(success)
-       .fail(failure);
+      .fail(failure);
       };
 
 
