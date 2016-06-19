@@ -26,7 +26,7 @@ const kegEventHandlers = () => {
     event.preventDefault();
     let data = getFormFields(this);
     let kegId = kegId;
-    kegApi.updateKeg1(kegUi.updateKegSuccess, kegUi.updateKegFailure, data, kegId);
+    kegApi.updateKeg(kegUi.updateKegSuccess, kegUi.updateKegFailure, data, kegId);
   });
 
   $('.content').on('click', '.validate-btn', function (event) {
