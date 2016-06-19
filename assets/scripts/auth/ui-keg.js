@@ -6,6 +6,7 @@ const kegApi = require('./api-keg');
 
 const kegKickSuccess = (data) => {
   console.log("keg kicked " + data);
+  kegApi.getKegs(kegApi.getKegSuccess, kegApi.getKegFailure);
 };
 
 const kegKickFailure = (error) => {

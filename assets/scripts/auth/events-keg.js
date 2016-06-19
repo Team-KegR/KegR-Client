@@ -38,6 +38,13 @@ const kegEventHandlers = () => {
     kegApi.validate(kegApi.validateSuccess, kegApi.validateFailure, kegId, validate);
   });
 
+  $('.content').on('click', '.kicked-btn', function (event) {
+    event.preventDefault();
+    console.log("clicked kicked button");
+    let kegId = $(this).closest('.kicked-btn').attr('data-attribute');
+    kegApi.kegKick(kegUi.kegKickSuccess, kegUi.kegKickFailure, kegId);
+  });
+
 
 
 };
